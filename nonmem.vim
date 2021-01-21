@@ -34,7 +34,7 @@ syntax match NMAssignEq  "=" contained
 syntax match NMSpecial "[#*]"
 
 " Dollar variables:
-syntax match NMDollarVar "$[a-zA-Z0-9_]\+"
+syntax match NMControlRecord "$[a-zA-Z0-9_]\+"
 
 " Numbers:
 syntax match  NMNumber "[-+]\=\(\<\d[[:digit:]_]*L\=\>\|0[xX]\x[[:xdigit:]_]*\>\)"
@@ -61,16 +61,16 @@ if version >= 508 || !exists("did_c_syn_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink NMComment     Comment
-  HiLink NMOperator    Operator
-  HiLink NMConditional Operator
-  HiLink NMSpecial     Special
-  HiLink NMKeyword     Statement
-  HiLink NMNumber      Number
-  HiLink NMFloat       Float
-  HiLink NMDollarVar   Constant
-  HiLink NMAssignVar   Identifier
-  HiLink NMTodo        Todo
+  HiLink NMComment       Comment
+  HiLink NMOperator      Operator
+  HiLink NMConditional   Operator
+  HiLink NMSpecial       Special
+  HiLink NMKeyword       Statement
+  HiLink NMNumber        Number
+  HiLink NMFloat         Float
+  HiLink NMControlRecord Constant
+  HiLink NMAssignVar     Identifier
+  HiLink NMTodo          Todo
 
   HiLink NMFunctionName Function
 
