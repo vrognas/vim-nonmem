@@ -34,7 +34,7 @@ syntax match NMAssignEq  "=" contained
 
 syntax match NMSpecial "[#*]"
 
-" Dollar variables:
+" Control Records, starts at the start of a line:
 syntax match NMControlRecord "\v(\_^\$\a+)"
 
 " Numbers:
