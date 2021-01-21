@@ -26,7 +26,6 @@ syntax keyword NMFunctionName ABS EPS EXP contained
 syntax keyword NMFunctionName LOG LOG10 RAND contained
 syntax keyword NMFunctionName SQRT contained
 
-
 " Other function
 syntax match NMAssignVar "^\s*[a-zA-Z][a-zA-Z0-9_]*\s*=[^=]" contains=NMAssignEq
 syntax match NMAssignEq  "=" contained
@@ -78,4 +77,3 @@ if version >= 508 || !exists("did_c_syn_inits")
 endif
 
 let b:current_syntax = "nonmem"
-
