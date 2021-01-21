@@ -34,7 +34,7 @@ syntax match NMAssignEq  "=" contained
 syntax match NMSpecial "[#*]"
 
 " Dollar variables:
-syntax match NMControlRecord "$[a-zA-Z0-9_]\+"
+syntax match NMControlRecord "\v(\_^\$\a+)"
 
 " Numbers:
 syntax match  NMNumber "[-+]\=\(\<\d[[:digit:]_]*L\=\>\|0[xX]\x[[:xdigit:]_]*\>\)"
